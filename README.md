@@ -1,5 +1,5 @@
-# flutter_web_view
-Flutter webview plugin to demonstrate hosting platform view in android and iOS
+# flutter_native_plugin
+Flutter nativie plugin to demonstrate hosting platform view in android and iOS
 =======
 # web_view
 
