@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 typedef FlutterWebViewCreatedCallback = void Function(
@@ -15,7 +17,30 @@ class KliveNessView extends StatelessWidget {
         return AndroidView(
           viewType: 'plugins.codingwithtashi/flutter_web_view',
           onPlatformViewCreated: _onPlatformViewCreated,
-        );
+        );/*PlatformViewLink(
+          viewType: 'plugins.codingwithtashi/flutter_web_view',
+          surfaceFactory:
+              (context, controller) {
+            return AndroidViewSurface(
+              controller: controller as AndroidViewController,
+              gestureRecognizers: const <Factory<OneSequenceGestureRecognizer>>{},
+              hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+            );
+          },
+          onCreatePlatformView: (params) {
+            return PlatformViewsService.initSurfaceAndroidView(
+              id: params.id,
+              viewType: 'plugins.codingwithtashi/flutter_web_view',
+              layoutDirection: TextDirection.ltr,
+              creationParamsCodec: const StandardMessageCodec(),
+              onFocus: () {
+                params.onFocusChanged(true);
+              },
+            )
+              ..addOnPlatformViewCreatedListener(_onPlatformViewCreated)
+              ..create();
+          },
+        );*/
       case TargetPlatform.iOS:
         return UiKitView(
           viewType: 'plugins.codingwithtashi/flutter_web_view',
@@ -43,4 +68,6 @@ class WebViewController {
   Future<void> setUrl({required String url}) async {
     return _channel.invokeMethod('setUrl', url);
   }
+
+
 }

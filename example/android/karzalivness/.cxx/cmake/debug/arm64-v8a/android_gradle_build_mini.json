@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/cpp/CMakeLists.txt",
+    "/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/vikash/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/vikash/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "karza-native-lib-Debug-arm64-v8a": {
+      "artifactName": "karza-native-lib",
+      "buildCommand": "/Users/vikash/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/arm64-v8a\" karza-native-lib",
+      "abi": "arm64-v8a",
+      "output": "/Users/vikash/StudioProjects/flutter_native_plugin/example/build/karzalivness/intermediates/cmake/debug/obj/arm64-v8a/libkarza-native-lib.so",
+      "runtimeFiles": [
+        "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/jniLibs/arm64-v8a/libKarzaFaceDetector2.so",
+        "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/jniLibs/arm64-v8a/libKarzaFaceLandmarker2.so"
+      ]
+    }
+  }
+}

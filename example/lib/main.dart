@@ -31,9 +31,9 @@ class _WebViewExampleState extends State<WebViewExample> {
       appBar: AppBar(title: const Text('Flutter WebView example')),
       body: Center(
         child: Container(
-          //color: Colors.pinkAccent,
-          width: 200,
           height: 200,
+          width: 200,
+          //color: Colors.grey,
           child: KliveNessView(
             onMapViewCreated: _onMapViewCreated,
           ),

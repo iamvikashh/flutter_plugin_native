@@ -1,0 +1,3 @@
+/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/karza-native-lib.dir

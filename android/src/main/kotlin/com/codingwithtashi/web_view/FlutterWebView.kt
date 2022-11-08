@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -34,13 +35,13 @@ class FlutterWebView internal constructor(
     private val kLivenessView: KLivenessView
     private  var methodChannel: MethodChannel
     override fun getView(): View {
-        Log.d("Priority","inside getView")
-        return kLivenessView
+        return kLivenessView//this is the object of UI class provided by plugin
     }
 
     init {
-        Log.d("Priority","inside init")
-       kLivenessView = KLivenessView(context)
+
+        kLivenessView = KLivenessView(context)
+
         kLivenessView.initialize(
             (activity as FragmentActivity).supportFragmentManager,
             this,
@@ -97,6 +98,8 @@ class FlutterWebView internal constructor(
     // set and load new Url
     private fun setText(methodCall: MethodCall, result: MethodChannel.Result ) {
         val url = methodCall.arguments as String
+
+
       //  webView.loadUrl(url)
         kLivenessView.initialize(
             (activity as FragmentActivity).supportFragmentManager,

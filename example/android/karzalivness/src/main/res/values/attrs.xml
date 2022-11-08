@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KLivenessView">
+        <attr name="klive_time_out_second" format="integer"/>
+        <attr name="klive_color_has_face" format="reference|color"/>
+        <attr name="klive_color_no_face" format="reference|color"/>
+        <attr name="klive_color_invalid_face" format="reference|color"/>
+        <attr name="klive_background" format="reference|color"/>
+        <attr name="klive_circle_width" format="dimension"/>
+    </declare-styleable>
+</resources>

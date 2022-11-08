@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/arm64-v8a'
+ninja: no work to do.

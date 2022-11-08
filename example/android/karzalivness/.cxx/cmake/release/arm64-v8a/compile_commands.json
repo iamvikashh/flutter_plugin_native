@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/release/arm64-v8a",
+  "command": "/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dkarza_native_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -o CMakeFiles/karza-native-lib.dir/KFaceDetector.cpp.o -c /Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/cpp/KFaceDetector.cpp",
+  "file": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/cpp/KFaceDetector.cpp"
+},
+
+{
+  "directory": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/release/arm64-v8a",
+  "command": "/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/vikash/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dkarza_native_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC   -o CMakeFiles/karza-native-lib.dir/native-lib.cpp.o -c /Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/cpp/native-lib.cpp",
+  "file": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/src/main/cpp/native-lib.cpp"
+}
+]

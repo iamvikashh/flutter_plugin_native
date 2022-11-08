@@ -1,0 +1,20 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="string_network_error_connect_host_error">Connect failed, please check your network.</string>
+    <string name="string_network_error_invalid_argument">Invalid argument of service api.</string>
+    <string name="string_network_error_detection_failed">Antihack detection failed</string>
+    <string name="string_network_error_download_error">Download url image failed.</string>
+    <string name="string_network_error_unauthorized">Authorization failed, please check your API_ID and API_SECRET.</string>
+    <string name="string_network_error_rate_limit_exceeded">Your authorization number is out of range.</string>
+    <string name="string_network_error_not_found">The request URL is not found.</string>
+    <string name="string_network_error_internal_error">It is error when processing in server.</string>
+    <string name="string_network_error_service_unavailable">Currently the service is down.</string>
+    <string name="string_network_error_payment_required">Need more credits to process requests.</string>
+    <string name="string_network_error_wrong_liveness_data">Invalid liveness data.</string>
+    <string name="string_network_error_rpc_timeout">Detection timeout.</string>
+    <string name="string_network_error_timeout">Time out, please check your network.</string>
+    <string name="string_network_error_recognization_detection_failed">detect image failed</string>
+    <string name="string_liveness_base">Liveness</string>
+</resources>

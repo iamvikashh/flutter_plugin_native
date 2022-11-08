@@ -1,0 +1,7 @@
+Executable : /Users/vikash/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/armeabi-v7a
+karza-native-lib
+jvmArgs : 
+

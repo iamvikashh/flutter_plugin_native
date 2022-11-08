@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:minHeight="320dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+</layout>
+
+    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:minHeight="320dp"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    tools:context=".KCameraFragment">-->
+
+    <!--    <androidx.camera.view.PreviewView-->
+    <!--        android:id="@+id/cameraView"-->
+    <!--        app:scaleType="fitCenter"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"/>-->
+
+    <!--</FrameLayout>-->
