@@ -1,0 +1,123 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'kotlin-android'
+
+repositories {
+    maven {
+        url "https://raw.github.com/synergian/wagon-git/releases"
+    }
+
+}
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+       // versionName 1
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    def STRING = "String"
+    def VARIABLE_BASE_URL = "BASE_URL"
+    def VALUE_BASE_URL = '"https://app.karza.in/{env}/videokyc/api/v2/aadhaar/qr"'
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            buildConfigField STRING, VARIABLE_BASE_URL, VALUE_BASE_URL
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField STRING, VARIABLE_BASE_URL, VALUE_BASE_URL
+        }
+    }
+
+    configurations {
+        deployerJar
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    //--- Android Dependencies ---//
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.annotation:annotation:1.0.0'
+    deployerJar "ar.com.synergian:wagon-git:0.2.5"
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+//    implementation 'com.google.android.material:material:1.2.0'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //--- Zxing Dependencies ---//
+    implementation 'com.google.zxing:core:3.4.1'
+//    api 'com.google.zxing:core:3.3.3'
+//    api 'com.google.zxing:core:3.4.1'
+//    api 'com.google.zxing:core:3.3.3'
+//    api 'com.google.zxing:core:3.2.1'
+//    implementation 'com.google.zxing:core:3.3.0'
+
+    //--- itext Dependencies ---/
+//    implementation "com.itextpdf:kernel:$rootProject.ext.itext"
+//    implementation "com.itextpdf:io:$rootProject.ext.itext"
+//    implementation "com.itextpdf:layout:$rootProject.ext.itext"
+
+    //--- Network Dependencies ---/
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.2.2'
+    implementation "com.amitshekhar.android:android-networking:1.0.2"
+
+    //--- Other Dependencies ---/
+    implementation 'com.gemalto.jp2:jp2-android:1.0'
+    implementation "pub.devrel:easypermissions:3.0.0"
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //--- Unused/Old Dependencies ---//
+//    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+//    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15to18', version: '1.67'
+//    implementation group: 'org.bouncycastle', name: 'bcpkix-jdk15to18', version: '1.67'
+//    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+//    implementation 'com.tom_roush:pdfbox-android:1.8.10.1'
+
+}
+
+/* Uploading aar to external repo*/
+//uploadArchives {
+//    dependsOn build
+//    configuration = configurations.archives
+//    repositories.mavenDeployer {
+//        pom.groupId = GROUP_ID
+//        pom.artifactId = ARTIFACT_ID
+//        pom.version = ARTIFACT_VERSION
+//        configuration = configurations.deployerJar
+//        repository(url: "git:releases://https://" + USER_NAME + ":" + REPO_PASSWORD + "@bitbucket.org/krzandroid/sdk.git")
+//        pom.project {
+//            developers {
+//                developer {
+//                    id DEV_ID
+//                    name DEV_NAME
+//                    email DEV_EMAIL
+//                }
+//            }
+//        }
+//    }
+//}
