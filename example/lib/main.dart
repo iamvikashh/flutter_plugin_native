@@ -33,7 +33,7 @@ class _WebViewExampleState extends State<WebViewExample> {
         child: Container(
           height: 200,
           width: 200,
-          //color: Colors.grey,
+          color: Colors.grey,
           child: KliveNessView(
             onMapViewCreated: _onMapViewCreated,
           ),

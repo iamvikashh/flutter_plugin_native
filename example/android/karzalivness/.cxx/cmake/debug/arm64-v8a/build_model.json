@@ -177,7 +177,6 @@
       "project": {
         "compilerSettingsCacheFolder": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/.cxx",
         "cxxFolder": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/.cxx",
-        "ideBuildTargetAbi": "arm64-v8a",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
@@ -201,6 +200,7 @@
     "objFolder": "/Users/vikash/StudioProjects/flutter_native_plugin/example/build/karzalivness/intermediates/cmake/debug/obj",
     "variantName": "debug",
     "validAbiList": [
+      "ARMEABI_V7A",
       "ARM64_V8A"
     ],
     "prefabDirectory": "/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/prefab",

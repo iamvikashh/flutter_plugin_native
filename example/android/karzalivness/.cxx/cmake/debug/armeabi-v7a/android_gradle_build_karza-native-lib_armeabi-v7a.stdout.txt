@@ -1,4 +1,2 @@
 ninja: Entering directory `/Users/vikash/StudioProjects/flutter_native_plugin/example/android/karzalivness/.cxx/cmake/debug/armeabi-v7a'
-[1/3] Building CXX object CMakeFiles/karza-native-lib.dir/native-lib.cpp.o
-[2/3] Building CXX object CMakeFiles/karza-native-lib.dir/KFaceDetector.cpp.o
-[3/3] Linking CXX shared library /Users/vikash/StudioProjects/flutter_native_plugin/example/build/karzalivness/intermediates/cmake/debug/obj/armeabi-v7a/libkarza-native-lib.so
+ninja: no work to do.

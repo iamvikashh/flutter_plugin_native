@@ -1,4 +1,5 @@
 # ninja log v5
-1	843	1667907777	CMakeFiles/karza-native-lib.dir/native-lib.cpp.o	72d9051c8a43ab2f
-0	1043	1667907777	CMakeFiles/karza-native-lib.dir/KFaceDetector.cpp.o	50d2137342712e16
-1043	1128	1667907777	/Users/vikash/StudioProjects/flutter_native_plugin/example/build/karzalivness/intermediates/cmake/debug/obj/arm64-v8a/libkarza-native-lib.so	dd7a1fc5e1d4237d
+0	20	0	clean	ab48ce9c5eb2ee67
+0	474	1669876952	CMakeFiles/karza-native-lib.dir/native-lib.cpp.o	72d9051c8a43ab2f
+0	674	1669876952	CMakeFiles/karza-native-lib.dir/KFaceDetector.cpp.o	50d2137342712e16
+674	752	1669876952	/Users/vikash/StudioProjects/flutter_native_plugin/example/build/karzalivness/intermediates/cmake/debug/obj/arm64-v8a/libkarza-native-lib.so	dd7a1fc5e1d4237d

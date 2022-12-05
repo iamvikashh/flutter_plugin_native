@@ -6,12 +6,13 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.util.Log
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
+import com.karza.qrcodescansdk.CodeScanner
+import com.karza.qrcodescansdk.CodeScannerView
 import com.sdk.karzalivness.KLivenessView
 import com.sdk.karzalivness.enums.*
 import com.sdk.karzalivness.interfaces.KLivenessCallbacks
@@ -21,6 +22,8 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.platform.PlatformView
+import org.bouncycastle.util.Pack
+import pub.devrel.easypermissions.EasyPermissions
 
 
 class FlutterWebView internal constructor(
@@ -33,13 +36,22 @@ class FlutterWebView internal constructor(
     val activity=activity
     val context=context
     private val kLivenessView: KLivenessView
+   // private val scannerView: CodeScannerView
     private  var methodChannel: MethodChannel
+    //private val mCodeScanner: CodeScanner
+
     override fun getView(): View {
+       // mCodeScanner.startPreview()
         return kLivenessView//this is the object of UI class provided by plugin
     }
 
     init {
-
+//        scannerView= CodeScannerView(context)
+//        mCodeScanner= CodeScanner(
+//            context,
+//            scannerView,
+//            "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXF1ZXN0X2lkIjoiYWYyZDQ0ZGQtMjk5OC00OGFmLThkMWEtNTkxOWM0MWU4Y2E4IiwidXNlcl9pZCI6MTk3MzA4LCJzY29wZSI6WyJhYWRoYWFyX3htbCJdLCJlbnYiOiJ0ZXN0IiwiY2xpZW50X2lkIjoiS2FyemFfVGVjaF90VmpJdVoiLCJzdGFnZSI6InRlc3QiLCJ1c2VyX3R5cGUiOiJvcGVuIiwiZXhwaXJ5X3RpbWUiOiIxNS0xMS0yMDIyVDA4OjE1OjMxIn0.-2gIUIVpGOyNby7_tYqRRDyYozNT1Bc9UG6-4zy9vpo"
+//        )
         kLivenessView = KLivenessView(context)
 
         kLivenessView.initialize(
@@ -55,7 +67,12 @@ class FlutterWebView internal constructor(
         // Init methodCall Listener
         methodChannel.setMethodCallHandler(this)
 
-      //  webView.initialize(supportFragmentManager,this,"token",KEnvironment.TEST, null, CameraFacing.FRONT)
+        //---- ScannerView Click Listener ----//
+//        scannerView.setOnClickListener {
+//            methodRequiresPermission()
+//        }
+
+        //  webView.initialize(supportFragmentManager,this,"token",KEnvironment.TEST, null, CameraFacing.BACK)
         // Set client so that you can interact within WebView
             //webView.webViewClient = WebViewClient()
     }
@@ -68,6 +85,7 @@ class FlutterWebView internal constructor(
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 101) {
 
+
             // Checking whether user granted the permission or not.
             if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 kLivenessView.initialize(
@@ -76,8 +94,9 @@ class FlutterWebView internal constructor(
                     "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXF1ZXN0X2lkIjoiNjZiMWJkNjYtNGZmOS00NGU4LTk1MjEtZDYwM2NiZjFiZTBkIiwidXNlcl9pZCI6MTk3MzA4LCJzY29wZSI6WyJsaXZlbmVzcyJdLCJlbnYiOiJ0ZXN0IiwiY2xpZW50X2lkIjoiS2FyemFfVGVjaF90VmpJdVoiLCJzdGFnZSI6InRlc3QiLCJ1c2VyX3R5cGUiOiJvcGVuIiwiZXhwaXJ5X3RpbWUiOiIyMS0xMC0yMDIyVDA5OjE0OjUyIn0._W8n-g8xcf49I-OQUzWhGAqdeyJswKx1wdXiZeJiCxQ",
                     KEnvironment.TEST,
                     null,
-                    CameraFacing.FRONT
+                    CameraFacing.BACK
                 )
+            //    mCodeScanner.startPreview()
 
                 // Showing the toast message
                 Toast.makeText(this, "Camera Permission Granted", Toast.LENGTH_SHORT).show()
@@ -85,6 +104,7 @@ class FlutterWebView internal constructor(
                 Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 
     override fun onMethodCall(methodCall: MethodCall, result: MethodChannel.Result) {
@@ -129,7 +149,7 @@ class FlutterWebView internal constructor(
         ) {
             ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.CAMERA), 101)
         } else {
-            //Toast.makeText(context, "Permission already granted", Toast.LENGTH_SHORT).show()
+
         }
     }
 
@@ -159,5 +179,25 @@ class FlutterWebView internal constructor(
 
     }
 
+    //***********************************************//
+    //********* Permission Related Methods **********//
+
+    private fun methodRequiresPermission() {
+        // Checking if permission is not granted
+        if (ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.CAMERA
+            ) == PackageManager.PERMISSION_DENIED
+        ) {
+            ActivityCompat.requestPermissions(activity, arrayOf(Manifest.permission.CAMERA), 101)
+        } else {
+          // mCodeScanner.startPreview()
+        }
+    }
+
+
+
 
 }
+
+

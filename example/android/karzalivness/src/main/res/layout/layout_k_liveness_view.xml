@@ -5,14 +5,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <!-- android:background="@drawable/border" -->
 
         <FrameLayout
             android:id="@+id/main_frame"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             app:layout_constraintDimensionRatio="H,3:4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +22,10 @@
 
         <com.sdk.karzalivness.KOverlayViewHAL
             android:id="@+id/overLay"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:visibility="gone"
-            app:layout_constraintDimensionRatio="H,3:4"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

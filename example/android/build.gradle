@@ -15,7 +15,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()
+        jcenter()
         maven { url "https://jitpack.io" }
 
         maven {
@@ -23,12 +23,14 @@ allprojects {
                 username "karza_android"
                 password "ZMQWUMGp2eSdexZkQMyQ"
             }
-            authentication{
+            authentication {
                 basic(BasicAuthentication)
             }
             url "https://api.bitbucket.org/2.0/repositories/" + "krzandroid/sdk/src/releases/"
+
         }
     }
+
 }
 
 rootProject.buildDir = '../build'

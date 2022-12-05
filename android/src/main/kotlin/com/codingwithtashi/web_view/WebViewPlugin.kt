@@ -21,6 +21,7 @@ class WebViewPlugin :FlutterPlugin,ActivityAware{
   }
 
   override fun onAttachedToActivity(activityPluginBinding: ActivityPluginBinding) {
+
     bind(activityPluginBinding)
   }
 
